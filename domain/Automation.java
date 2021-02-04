@@ -100,16 +100,13 @@ public class Automation {
 		return Arrays.toString(studentsWithSearchingName);
 	}
 	
-	/**
-	 * TODO private String searchStudentByFullName(String fullName)
-	 * @author ikramdagci
-	 *
-	 */
+	
+	 // TODO private String searchStudentByFullName(String fullName)
 
 	private static class Student {
 		
 		private static int idCounter;
-		private Integer idGenerator = ++idCounter;
+		private Integer tempId = ++idCounter;
 		private String id = idGenerator.toString(); 
 		private String firstName;
 		private String lastName;
@@ -179,9 +176,8 @@ public class Automation {
 	}
 
 	/**
-	 * Builder builder} Öğrencinin hangi ilk parametrelerle oluşturulacağı Builder
-	 * class'ıyla belirlenecek, böylece öğrencinin her alan'ı(field) için diğer
-	 * alanlarla kombine edilerek Consructor'lar oluşturulmak zorunda kalınmayacak.
+	 * Separate the construction of a complex object from its representation 
+	 * so that the same construction process can create different representations
 	 * 
 	 * @author ikramdagci
 	 */
